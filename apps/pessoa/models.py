@@ -7,3 +7,5 @@ class Pessoa(models.Model):
     nif = models.CharField(max_length=9)
     email = models.EmailField()
     
+    def __str__(self):
+        return self.nome
