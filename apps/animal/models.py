@@ -6,3 +6,6 @@ class Animal(models.Model):
     especie = models.CharField(max_length=30)
     idade = models.IntegerField()
 
+    def __str__(self):
+        #return self.nome
+        return f'{self.especie}: {self.nome}'
