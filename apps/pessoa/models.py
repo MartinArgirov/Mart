@@ -8,4 +8,5 @@ class Pessoa(models.Model):
     email = models.EmailField()
     
     def __str__(self):
-        return self.nome
+        #return self.nome
+        return f'{self.nome}: {self.idade}'
