@@ -9,4 +9,4 @@ class Pessoa(models.Model):
     
     def __str__(self):
         #return self.nome
-        return f'{self.nome}: {self.idade}'
+        return f'{self.nome}: {self.idade}   Nif: {self.nif}'

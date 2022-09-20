@@ -31,8 +31,8 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'apps.pessoa.apps.PessoaConfig'
-    'apps.animal.apps.AnimalConfig'
+    'apps.pessoa.apps.PessoaConfig',
+    'apps.animal.apps.AnimalConfig',    
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

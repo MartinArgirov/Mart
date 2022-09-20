@@ -8,4 +8,4 @@ class Animal(models.Model):
 
     def __str__(self):
         #return self.nome
-        return f'{self.especie}: {self.nome}'
+        return f'{self.especie}: {self.nome} : {self.idade}'

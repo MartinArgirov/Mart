@@ -6,4 +6,4 @@ from App2.settings import DEFAULT_AUTO_FIELD
 
 class PessoaConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'pessoa'
+    name = 'apps.pessoa'
