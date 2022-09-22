@@ -6,3 +6,6 @@ a{
     color: aliceblue;
     font-size: 30px;
 }
+dt {
+    font-weight: 700 /* rtl:600 */;
+  }
