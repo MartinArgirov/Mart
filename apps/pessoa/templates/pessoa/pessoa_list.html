@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<a class="btn btn-primary" href="{% url 'pessoa:novo' %}">Novo</a>
+
+<table class="table">
+<tr>
+    <th>Nome</th>
+    <th>Idade</th>
+    <th>NIF</th>
+    <th>E-mail</th>
+</tr>
+{% for object in object_list %}
+
+<tr>
+    <td>{{ object.nome }}</td>
+    <td>{{ object.idade }}</td>
+    <td>{{ object.nif }}</td>
+    <td>{{ object.email }}</td>
+</tr>
+<!-- <p>{{ object.nome }}</p>
+<p>{{ object.idade }}</p>
+<p>{{ object.nif }}</p>
+<p>{{ object.email }}</p> -->
+
+{% endfor %}
+</table>
+{% endblock %}

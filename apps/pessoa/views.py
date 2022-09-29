@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.views.generic import CreateView
+from django.views.generic import CreateView, ListView
 from django.urls import reverse_lazy
 from apps.pessoa.models import Pessoa
 
@@ -13,4 +13,8 @@ def about(request):
 class PessoaCreateView(CreateView):
     model = Pessoa 
     fields = '__all__'
-    success_url: reverse_lazy('pessoa:home')     
+    #success_url = reverse_lazy('pessoa:home')
+    success_url = reverse_lazy('pessoa:lista')
+
+class PessoaListView(ListView):
+    model = Pessoa

@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<a class="btn btn-primary" href="{% url 'animal:novo' %}">Novo</a>
+
+<table class="table">
+<tr>
+    <th>Nome do Animal</th>
+    <th>Espécie do Animal</th>
+    <th>Idade do Animal</th>
+</tr>
+{% for object in object_list %}
+
+<tr>
+    <td>{{ object.nome }}</td>
+    <td>{{ object.especie }}</td>
+    <td>{{ object.idade }}</td>
+</tr>
+<!-- <p>{{ object.nome }}</p>
+<p>{{ object.especie }}</p>
+<p>{{ object.idade }}</p> -->
+
+{% endfor %}
+</table>
+{% endblock %}
