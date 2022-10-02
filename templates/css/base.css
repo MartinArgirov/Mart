@@ -3,9 +3,13 @@ h4{
     font-size: 20px;
 }
 a{
-    color: aliceblue;
+    color: rgb(13, 132, 235);
     font-size: 30px;
 }
 dt {
     font-weight: 700 /* rtl:600 */;
   }
+
+.navbar {
+    background-color: rgb(50, 139, 248);
+}

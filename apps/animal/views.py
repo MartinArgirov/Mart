@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.views.generic import CreateView, ListView
+from django.views.generic import CreateView, ListView, DetailView
 from django.urls import reverse_lazy
 from .models import Animal
 
@@ -17,4 +17,7 @@ class AnimalCreateView(CreateView):
     success_url = reverse_lazy('animal:lista')  
 
 class AnimalListView(ListView):
-    model = Animal     
+    model = Animal
+
+class AnimalDetailView(DetailView):
+    model = Animal         
