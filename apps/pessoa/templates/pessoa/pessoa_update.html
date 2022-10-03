@@ -3,14 +3,15 @@
 
 {% block content %}
 <div class="content-section">
-    <h3>Animal</h3>
+    <h3>Pessoa</h3>
     <hr>
     <form method="Post">
         {% csrf_token %}
+
         {{ form|crispy}}
         <br>
-        <button class="btn btn-outline-primary" type="submit">Criar</button>
-        <a class="btn btn-outline-danger" href="{% url 'animal:lista' %}"><i class="fa-sharp fa-solid fa-backward"></i></a>
+        <button class="btn btn-outline-primary" type="submit">Guardar</button>
+        <a class="btn btn-outline-danger" href="{% url 'pessoa:lista' %}"><i class="fa-sharp fa-solid fa-backward"></i></a>
     </form>
 </div>
 {% endblock %}

@@ -1,6 +1,6 @@
 from django.shortcuts import render
-from django.views.generic import CreateView, ListView, DetailView
-from django.urls import reverse_lazy
+from django.views.generic import CreateView, ListView, DetailView, UpdateView, DeleteView
+from django.urls import reverse_lazy, reverse
 from .models import Animal
 
 # Apresentação de página estática
@@ -20,4 +20,22 @@ class AnimalListView(ListView):
     model = Animal
 
 class AnimalDetailView(DetailView):
-    model = Animal         
+    model = Animal 
+
+class AnimalUpdateView(UpdateView):
+    model = Animal
+    fields = ['nome', 'idade']
+    template_name = 'animal/animal_update.html'
+    success_url = reverse_lazy('animal:lista') 
+
+class AnimalUpdateDetailView(UpdateView):
+    model = Animal
+    fields = ['nome', 'idade']
+    template_name = 'animal/animal_detail_update.html'
+    #success_url = reverse_lazy('animal:lista')
+    def get_success_url(self):
+        return reverse('animal:detalhe', kwargs={'pk': self.object.id})
+
+class AnimalDeleteView(DeleteView):
+    model = Animal
+    success_url = reverse_lazy('animal:lista')                   

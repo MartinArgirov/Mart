@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.views.generic import CreateView, ListView, DetailView
+from django.views.generic import CreateView, ListView, DetailView, UpdateView, DeleteView
 from django.urls import reverse_lazy
 from apps.pessoa.models import Pessoa
 
@@ -23,4 +23,16 @@ class PessoaListView(ListView):
     model = Pessoa
 
 class PessoaDetailView(DetailView):
-    model = Pessoa    
+    model = Pessoa 
+
+class PessoaUpdateView(UpdateView):
+    model = Pessoa 
+    fields = ['nome', 'idade', 'email']
+    template_name = 'pessoa/pessoa_update.html'
+    success_url = reverse_lazy('pessoa:lista')
+
+class PessoaUpdateDetailView(UpdateView):
+    model = Pessoa 
+
+class PessoaDeleteView(UpdateView):
+    model = Pessoa            

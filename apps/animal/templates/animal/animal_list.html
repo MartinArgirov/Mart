@@ -10,6 +10,8 @@
     <th>Espécie do Animal</th>
     <th>Idade do Animal</th>
     <th></th>
+    <th></th>
+    <th></th>
 </tr>
 {% for object in object_list %}
 <tr>
@@ -17,6 +19,8 @@
     <td>{{ object.especie }}</td>
     <td>{{ object.idade }}</td>
     <td><a class="btn btn-outline-primary" href="{% url 'animal:detalhe' object.id %}"><i class="fa-solid fa-eye"></i></a></td>
+    <td><a class="btn btn-outline-primary" href="{% url 'animal:atualizar' object.id %}"><i class="fa-solid fa-pencil"></td>
+    <td><a class="btn btn-outline-danger" href="{% url 'animal:eliminar' object.id %}"><i class="fa-solid fa-trash-can"></td>
 </tr>
 <!-- <p>{{ object.nome }}</p>
 <p>{{ object.especie }}</p>

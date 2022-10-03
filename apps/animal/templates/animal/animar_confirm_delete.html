@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="content-section">
+    <h3>Animal</h3>
+    <hr>
+    <form method="Post">
+        {% csrf_token %}
+        <p>Tem certeza que pretende eliminar o animal {{ object.especie }} {{ object.nome }}</p>
+        {{ form }}
+        <br>
+        <button class="btn btn-outline-danger" type="submit">Sim</button>
+        <a class="btn btn-outline-primary" href="{% url 'animal:lista' %}">Não</a>
+    </form>
+</div>
+{% endblock %}
