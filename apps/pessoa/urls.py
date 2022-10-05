@@ -6,7 +6,7 @@ from .views import (contacts, about, email, PessoaCreateView,
 app_name = 'pessoa'
 
 urlpatterns = [
-    path('', contacts, name='contacts'),# Com espaço vazio é a pagina inicial
+    path('contacts/', contacts, name='contacts'),# Com espaço vazio é a pagina inicial
     path('about/', about, name='about'),
     path('email/', email, name='email'),
     path('novo/', PessoaCreateView.as_view(), name='novo'),
