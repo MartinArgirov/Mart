@@ -33,7 +33,7 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     'apps.pessoa.apps.PessoaConfig',
     'apps.animal.apps.AnimalConfig',
-    'apps.Despesas.apps.DespesaConfig',
+    'apps.despesa.apps.DespesaConfig',
     'crispy_forms',    
     'django.contrib.admin',
     'django.contrib.auth',

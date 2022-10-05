@@ -5,10 +5,10 @@ from .models import Despesa
 
 # Apresentação de página estática
 def home(request):
-    return render(request, 'despesas/home.html')
+    return render(request, 'despesa/home.html')
 
 def about(request):
-    return render(request, 'despesas/about.html')
+    return render(request, 'despesa/about.html')
 # Create your views here.
 class DespesaCreateView(CreateView):
     model = Despesa # atributo
@@ -25,13 +25,13 @@ class DespesaDetailView(DetailView):
 class DespesaUpdateView(UpdateView):
     model = Despesa
     fields = ['valor', 'categoria', 'mes']
-    template_name = 'despesas/despesa_update.html'
+    template_name = 'despesa/despesa_update.html'
     success_url = reverse_lazy('despesa:lista') 
 
 class DespesaUpdateDetailView(UpdateView):
     model = Despesa
     fields = ['valor', 'categoria', 'mes']
-    template_name = 'despesas/despesa_update.html'
+    template_name = 'despesa/despesa_update.html'
     success_url = reverse_lazy('despesa:lista')
     
     def get_success_url(self):
@@ -44,5 +44,5 @@ class DespesaDeleteView(DeleteView):
 
 class DespesaDeleteDetailView(DeleteView):
     model = Despesa
-    template_name = 'despesas/despesa_detail_confirm_delete.html'
+    template_name = 'despesa/despesa_detail_confirm_delete.html'
     success_url = reverse_lazy('despesa:lista')                                   
