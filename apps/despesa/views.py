@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.views.generic import CreateView, ListView, DetailView, UpdateView, DeleteView
 from django.urls import reverse_lazy, reverse
 from .models import Despesa
+from apps.despesa.models import Despesa
 
 # Apresentação de página estática
 def home(request):
@@ -9,6 +10,7 @@ def home(request):
 
 def about(request):
     return render(request, 'despesa/about.html')
+
 # Create your views here.
 class DespesaCreateView(CreateView):
     model = Despesa # atributo
