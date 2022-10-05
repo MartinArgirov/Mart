@@ -1,15 +1,19 @@
 h4{
-    color: rgb(249, 253, 253);
+    color: rgb(244, 129, 15);
     font-size: 20px;
 }
 a{
-    color: rgb(13, 132, 235);
+    color: rgb(13, 235, 46);
     font-size: 30px;
 }
-dt {
+dt{
     font-weight: 700 /* rtl:600 */;
   }
 
-nav{
-    background-color: rgb(50, 139, 248);
+.nav{
+    background-color: rgb(71, 81, 93);
+}
+
+li{
+    color: aliceblue;
 }
