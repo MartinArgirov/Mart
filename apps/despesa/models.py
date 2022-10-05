@@ -14,4 +14,4 @@ class Despesa(models.Model):
     def __str__(self):
         #return self.valor
         #return f'{self.mes}: {self.valor}: {self.categoria}'
-        return f'{self.mes}: {self.valor}'
+        return f'{self.categoria}: {self.mes}: {self.valor}'

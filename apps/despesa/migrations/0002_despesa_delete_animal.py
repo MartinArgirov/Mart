@@ -20,6 +20,6 @@ class Migration(migrations.Migration):
             ],
         ),
         migrations.DeleteModel(
-            name='Despesa',
+            name='Animal',
         ),
     ]
