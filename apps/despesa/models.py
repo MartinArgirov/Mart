@@ -9,6 +9,6 @@ class Despesa(models.Model):
     mes = models.IntegerField()
 
     def __str__(self):
-        #return self.nome
-        #return f'{self.especie}: {self.nome} / idade: {self.idade} anos'
-        return f'{self.mes}: {self.valor}: {self.categoria}'
+        #return self.valor
+        #return f'{self.mes}: {self.valor}: {self.categoria}'
+        return f'{self.mes}: {self.valor}'
