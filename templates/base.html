@@ -18,39 +18,34 @@
         }
     </style>
     <body>
-      <nav class="navbar" style="background-color: #0566ab;">
+      <nav class="navbar navbar-expand-sm" style="background-color: #0c2aec;">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">Navbar</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link" href="{% url 'animal:home' %}">Home</a>
+            <a class="navbar-brand mb-0 h1" href="#">Tarefas Navbar</a>
+            <ul class="navbar-nav">
+              <li class="nav-item active">
+                <a class="nav-link active" href="{% url 'animal:home' %}">Home</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="{% url 'animal:about' %}">About</a>
+              <li class="nav-item active">
+                <a class="nav-link active" href="{% url 'animal:about' %}">About</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="{% url 'animal:lista' %}">Animais</a>
+              <li class="nav-item active">
+                <a class="nav-link active" href="{% url 'animal:lista' %}">Animais</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="{% url 'pessoa:lista' %}">Pessoas</a>
+              <li class="nav-item active">
+                <a class="nav-link active" href="{% url 'pessoa:lista' %}">Pessoas</a>
               </li>              
-              <li class="nav-item">
-                <a class="nav-link" href="{% url 'pessoa:contacts' %}">Contacts</a>
+              <li class="nav-item active">
+                <a class="nav-link active" href="{% url 'pessoa:contacts' %}">Contacts</a>
               </li>
             </ul>
-            <form class="d-flex" role="search">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
-          </div>
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
         </div>
       </nav>
       <div style="padding-top: 20px;" class="container">
-        <h1>Tarefa C.R.U.<span style="color: rgb(234, 10, 10);" >D.</span></h1><br> <h4>03/10/2022-v.2</h4>
+        <h1>Tarefa C.R.U.D.</h1><br> <h4>10/2022</h4>
           {% block content %}{% endblock %}
         <a href="https://getbootstrap.com/docs/5.2/getting-started/introduction/">Link Aprendizagem</Link></a><br><br>
       </div>  
