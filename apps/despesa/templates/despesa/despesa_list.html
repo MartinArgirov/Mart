@@ -20,6 +20,9 @@
 </tr>
 {% for object in object_list %}
 <tr>
+    <td>{{ object.id }}</td>
+    <td>{{ object.despesa }}</td>
+    <td>{{ object.categoria }}</td>
     <td>{{ object.valor }}</td>
     <td>{{ object.data }}</td>
     <td>{{ object.mes }}</td>

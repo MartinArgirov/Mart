@@ -6,7 +6,7 @@
     <hr>
     <form method="Post">
         {% csrf_token %}
-        <p>Tem certeza que pretende eliminar o {{ object.valor }} {{ object.data }}</p>
+        <p>Tem certeza que pretende eliminar o {{ object.despesa }} {{ object.valor }} {{ object.data }}</p>
         {{ form }}
         <br>
         <button class="btn btn-outline-danger" type="submit">Sim</button>
