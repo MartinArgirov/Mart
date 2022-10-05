@@ -5,13 +5,15 @@
 <a class="btn btn-primary" href="{% url 'animal:novo' %}"><i class="fa-solid fa-plus"></i></a>
 
 <table class="table">
+    <h3>Animal</h3>
+    <hr>
 <tr>
-    <th>Nome do Animal</th>
-    <th>Espécie do Animal</th>
-    <th>Idade do Animal</th>
-    <th></th>
-    <th></th>
-    <th></th>
+    <th>Nome</th>
+    <th>Espécie</th>
+    <th>Idade</th>
+    <th>Ver</th>
+    <th>Editar</th>    
+    <th>Excluir</th>
 </tr>
 {% for object in object_list %}
 <tr>

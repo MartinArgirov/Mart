@@ -33,9 +33,16 @@ class AnimalUpdateDetailView(UpdateView):
     fields = ['nome', 'idade']
     template_name = 'animal/animal_detail_update.html'
     #success_url = reverse_lazy('animal:lista')
+    
     def get_success_url(self):
         return reverse('animal:detalhe', kwargs={'pk': self.object.id})
 
 class AnimalDeleteView(DeleteView):
     model = Animal
-    success_url = reverse_lazy('animal:lista')                   
+    template_name = 'animal/animal_detail_confirm_delete.html'
+    success_url = reverse_lazy('animal:lista')
+
+class AnimalDeleteDetailView(DeleteView):
+    model = Animal
+    template_name = 'animal/animal_detail_confirm_delete.html'
+    success_url = reverse_lazy('animal:lista')                        

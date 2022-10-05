@@ -1,5 +1,7 @@
 from django.urls import path
-from .views import contacts, about, email, PessoaCreateView, PessoaListView, PessoaDetailView, PessoaDeleteView, PessoaUpdateView, PessoaUpdateDetailView
+from .views import (contacts, about, email, PessoaCreateView, 
+                    PessoaListView, PessoaDetailView, 
+                    PessoaUpdateView, PessoaDeleteView,  PessoaUpdateDetailView)
 
 app_name = 'pessoa'
 
@@ -11,5 +13,5 @@ urlpatterns = [
     path('lista/', PessoaListView.as_view(), name='lista'),
     path('detalhe/<int:pk>/', PessoaDetailView.as_view(), name='detalhe'),
     path('atualizar/<int:pk>/', PessoaUpdateView.as_view(), name='atualizar'),
-    path('detalhe/atualizar<int:pk>/', PessoaUpdateDetailView.as_view(), name='detalhe-atializar')
+    path('confirmar/elimihar/<int:pk>/', PessoaDeleteView.as_view(), name='eliminar')
 ]

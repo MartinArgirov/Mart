@@ -34,5 +34,6 @@ class PessoaUpdateView(UpdateView):
 class PessoaUpdateDetailView(UpdateView):
     model = Pessoa 
 
-class PessoaDeleteView(UpdateView):
-    model = Pessoa            
+class PessoaDeleteView(DeleteView):
+    model = Pessoa 
+    success_url = reverse_lazy('pessoa:lista')           

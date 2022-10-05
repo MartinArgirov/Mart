@@ -2,30 +2,30 @@
 
 {% block content %}
 
-<a class="btn btn-outline-primary" href="{% url 'pessoa:novo' %}"><i class="fa-solid fa-plus"></i></a>
+<a class="btn btn-primary" href="{% url 'pessoa:novo' %}"><i class="fa-solid fa-plus"></i></a>
 
 <table class="table">
-    <tr>
-        <th>Nome</th>
-        <th>Idade</th>
-        <th>NIF</th>
-        <th>E-mail</th>
-        <th></th>
-        <th></th>
-    </tr>
-    {% for object in object_list %}
+    <h3>Pessoa</h3>
+    <hr>
+<tr>
+    <th>Nome</th>
+    <th>Idade</th>
+    <th>NIF</th>
+    <th>E-mail</th>
+    <th>Ver</th>
+    <th>Editar</th>    
+    <th>Excluir</th>
+</tr>
+{% for object in object_list %}
+<tr>
+    <td>{{ object.nome }}</td>
+    <td>{{ object.idade }}</td>
+    <td>{{ object.email }}</td>
+    <td><a class="btn btn-outline-primary" href="{% url 'pessoa:detalhe' object.id %}"><i class="fa-solid fa-eye"></i></a></td>
+    <td><a class="btn btn-outline-primary" href="{% url 'pessoa:atualizar' object.id %}"><i class="fa-solid fa-pencil"></td>
+    <td><a class="btn btn-outline-danger" href="{% url 'pessoa:eliminar' object.id %}"><i class="fa-solid fa-trash-can"></td>
+</tr>
 
-        <tr>
-            <td>{{ object.nome }}</td>
-            <td>{{ object.idade}}</td>
-            <td>{{ object.nif }}</td>
-            <td>{{ object.email }}</td>
-            <td><a class="btn btn-outline-primary" href="{% url 'pessoa:detalhe' object.id %}"><i class="fa-solid fa-eye"></i></a></td>
-            <td><a class="btn btn-outline-primary" href="{% url 'pessoa:atualizar' object.id %}"><i class="fa-solid fa-pencil"></i></a></td>
-            <td></td>
-            <td></td>
-        </tr>
-
-    {% endfor %}
+{% endfor %}
 </table>
 {% endblock %}
