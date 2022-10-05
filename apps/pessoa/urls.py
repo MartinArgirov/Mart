@@ -13,5 +13,6 @@ urlpatterns = [
     path('lista/', PessoaListView.as_view(), name='lista'),
     path('detalhe/<int:pk>/', PessoaDetailView.as_view(), name='detalhe'),
     path('atualizar/<int:pk>/', PessoaUpdateView.as_view(), name='atualizar'),
-    path('confirmar/elimihar/<int:pk>/', PessoaDeleteView.as_view(), name='eliminar')
+    path('confirmar/elimihar/<int:pk>/', PessoaDeleteView.as_view(), name='eliminar'),
+    path('update/<int:pk>/', PessoaUpdateDetailView.as_view(), name='update')
 ]

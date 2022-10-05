@@ -4,13 +4,13 @@ from django.urls import reverse_lazy, reverse
 from .models import Despesa
 
 # Apresentação de página estática
-def id(request):
-    return render(request, 'despesa/id.html')
+def home(request):
+    return render(request, 'despesas/home.html')
 
-def desp(request):
-    return render(request, 'desp/despesa.html')
+def about(request):
+    return render(request, 'despesas/about.html')
 # Create your views here.
-class DespesaAnimalCreateView(CreateView):
+class DespesaCreateView(CreateView):
     model = Despesa # atributo
     fields = '__all__' # atributo que mostra Nome, Especie , Idade em Animal
     #success_url = reverse_lazy('animal:home')
@@ -22,27 +22,27 @@ class DespesaListView(ListView):
 class DespesaDetailView(DetailView):
     model = Despesa 
 
-class AnimalUpdateView(UpdateView):
+class DespesaUpdateView(UpdateView):
     model = Despesa
     fields = ['valor', 'categoria', 'mes']
-    template_name = 'control_despesa/despesa_update.html'
+    template_name = 'despesas/despesa_update.html'
     success_url = reverse_lazy('despesa:lista') 
 
 class DespesaUpdateDetailView(UpdateView):
     model = Despesa
     fields = ['valor', 'categoria', 'mes']
-    template_name = 'control_despesa/despesa_update.html'
-    #success_url = reverse_lazy('animal:lista')
+    template_name = 'despesas/despesa_update.html'
+    success_url = reverse_lazy('despesa:lista')
     
     def get_success_url(self):
         return reverse('despesa:detalhe', kwargs={'pk': self.object.id})
 
 class DespesaDeleteView(DeleteView):
     model = Despesa
-    template_name = 'control_despesa/despesa_detail_confirm_delete.html'
-    success_url = reverse_lazy('animal:lista')
+    #template_name = 'control_despesa/despesa_detail_confirm_delete.html'
+    success_url = reverse_lazy('despesa:lista')
 
 class DespesaDeleteDetailView(DeleteView):
     model = Despesa
-    template_name = 'control_despesa/despesa_detail_confirm_delete.html'
-    success_url = reverse_lazy('animal:lista')                        
+    template_name = 'despesas/despesa_detail_confirm_delete.html'
+    success_url = reverse_lazy('despesa:lista')                                   
