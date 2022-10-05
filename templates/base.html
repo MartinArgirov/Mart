@@ -7,14 +7,14 @@
         <link rel="stylesheet" href="../templates/css/base.css">
     </head>
     <style>
-        .container {
+        /* .container {
             margin-left: 350px;
             margin-top: 80px;
-            width: 300px;
+            width: 180px;
             height: 100px;
             padding: 15px;
             background-color: rgb(29, 166, 235);           
-        }
+        } */
     </style> 
     <body>
       <nav class="navbar navbar-expand-sm" style="background-color: #0c2aec;">
@@ -22,32 +22,32 @@
             <a class="navbar-brand mb-0 h1" href="#">Tarefas Navbar</a>
             <ul class="navbar-nav">
               <li class="nav-item active">
-                <a class="nav-link active" href="{% url 'animal:home' %}">Home</a>
+                <a class="nav-link active" href="{% url 'animal:home' %}" style="color: White;">Home</a>
               </li>
               <li class="nav-item active">
-                <a class="nav-link active" href="{% url 'animal:about' %}">About</a>
+                <a class="nav-link active" href="{% url 'animal:about' %}" style="color: White;">About</a>
               </li>
               <li class="nav-item active">
-                <a class="nav-link active" href="{% url 'animal:lista' %}">Animais</a>
+                <a class="nav-link active" href="{% url 'animal:lista' %}" style="color: White;">Animais</a>
               </li>
               <li class="nav-item active">
-                <a class="nav-link active" href="{% url 'pessoa:lista' %}">Pessoas</a>
+                <a class="nav-link active" href="{% url 'pessoa:lista' %}" style="color: White;">Pessoas</a>
               </li>  
+              <!-- <li class="nav-item active">
+                <a class="nav-link active" href="{% url 'despesa:lista' %}" style="color: White;">Despesas</a>
+              </li>             -->
               <li class="nav-item active">
-                <a class="nav-link active" href="{% url 'despesa:lista' %}">Despesas</a>
-              </li>            
-              <li class="nav-item active">
-                <a class="nav-link active" href="{% url 'pessoa:contacts' %}">Contacts</a>
+                <a class="nav-link active" href="{% url 'pessoa:contacts' %}" style="color: White;">Contacts</a>
               </li>
             </ul>
           <form class="d-flex" role="search">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Search</button>
+            <input class="form-control me-2" type="search" placeholder=" " aria-label="Search">
+            <button class="btn btn-outline-success" type="submit" style="color: White;">Search</button>
           </form>
         </div>
       </nav>
        <div style="padding-top: 20px;" class="container">
-        <h1>C.R.U.D.</h1><br> <h4>10/2022</h4>
+        <!-- <h1>C.R.U.D.</h1><br> <h4>10/2022</h4> -->
         {% block content %}{% endblock %} 
         <a href="https://getbootstrap.com/docs/5.2/getting-started/introduction/">Link Aprendizagem</Link></a><br><br>
       </div>
