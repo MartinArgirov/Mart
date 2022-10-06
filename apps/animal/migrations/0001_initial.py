@@ -10,7 +10,6 @@ class Migration(migrations.Migration):
 
     dependencies = [
         ('pessoa', '0001_initial'),
-        ('animal', '0001_initial'),
     ]
 
     operations = [
