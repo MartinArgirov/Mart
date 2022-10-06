@@ -6,15 +6,21 @@ import django.db.models.deletion
 
 class Migration(migrations.Migration):
 
+    initial = True
+
     dependencies = [
         ('pessoa', '0001_initial'),
-        ('animal', '0001_initial'),
     ]
 
     operations = [
-        migrations.AddField(
-            model_name='animal',
-            name='pessoa',
-            field=models.ForeignKey(null=True, on_delete=django.db.models.deletion.SET_NULL, to='pessoa.pessoa')),
+        migrations.CreateModel(
+            name='Animal',
+            fields=[
+                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+                ('nome', models.CharField(max_length=50)),
+                ('especie', models.CharField(max_length=30)),
+                ('idade', models.IntegerField()),
+                ('pessoa', models.ForeignKey(null=True, on_delete=django.db.models.deletion.SET_NULL, to='pessoa.pessoa')),
+            ],
+        ),
     ]
-        
