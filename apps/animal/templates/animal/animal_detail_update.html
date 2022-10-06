@@ -7,8 +7,17 @@
     <hr>
     <form method="Post">
         {% csrf_token %}
-
-        {{ form|crispy}}
+        <div class="row">
+            <div class="col-12 col-md-4">
+              {{ form.nome|as_crispy_field }}
+            </div>
+            <div class="col-12 col-md-4">
+                {{ form.idade|as_crispy_field }}
+            </div>
+            <div class="col-12 col-md-4">
+                {{ form.pessoa|as_crispy_field }}
+            </div>
+        </div>{{ form|crispy}}
         <br>
         <button class="btn btn-outline-primary" type="submit">Guardar</button>
         <a class="btn btn-outline-danger" href="{% url 'animal:detalhe' object.id %}"><i class="fa-sharp fa-solid fa-backward"></i></a>
