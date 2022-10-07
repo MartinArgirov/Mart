@@ -1,8 +1,11 @@
 from django.db import models
+
+# Create your models here.
+from django.db import models
 from apps.pessoa.models import Pessoa
 
 # Create your models here.
-class Animal(models.Model):
+class Animals(models.Model):
     nome = models.CharField(max_length=50)
     especie = models.CharField(max_length=30)
     #idade = models.IntegerField(blank=True, null=True) # assim não tem nenhum valor

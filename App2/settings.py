@@ -20,7 +20,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-f6%35-o1ftthq)7gyx7r3k1@6!zp#gctwgflrmm)!7#*v_(i()'
+SECRET_KEY = 'django-insecure-gsl#_1ta!78u0$qyqb=2xn&^h-s^bc@=hf&jd*+o8fad9nc&)j'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -31,10 +31,6 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'apps.pessoa.apps.PessoaConfig',
-    'apps.animal.apps.AnimalConfig',
-    'apps.despesa.apps.DespesaConfig',
-    'crispy_forms',    
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -58,7 +54,7 @@ ROOT_URLCONF = 'App2.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['templates'],
+        'DIRS': [],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -120,15 +116,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 STATIC_URL = '/var/www/static/'
-STATICFILES_DIRS = [
-    BASE_DIR / "static",
-    '/var/www/static/',
-]
-
-STATIC_ROOT = "App2/static/"
+STATICFILES_DIRS = [STATIC_URL]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-CRISPY_TEMPLATE_PACK = 'bootstrap4'

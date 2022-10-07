@@ -1,4 +1,7 @@
 from django.shortcuts import render
+
+# Create your views here.
+from django.shortcuts import render
 from django.views.generic import CreateView, ListView, DetailView, UpdateView, DeleteView
 from django.urls import reverse_lazy
 from apps.pessoa.models import Pessoa
@@ -36,4 +39,4 @@ class PessoaUpdateDetailView(UpdateView):
 
 class PessoaDeleteView(DeleteView):
     model = Pessoa 
-    success_url = reverse_lazy('pessoa:lista')           
+    success_url = reverse_lazy('pessoa:lista')    
